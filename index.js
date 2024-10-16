@@ -26,11 +26,12 @@ app.put('/api/items/:name', (req, res)=> {
     let itemToBeUpdated = items.find(item => item.name === name);
 
     if(itemToBeUpdated){
-        const newName = {
-            name: req.body.name,
-            id: req.body.id,
-            price: req.body.price
-        }
+        // const newName = {
+        //     name: req.body.name,
+        //     id: req.body.id,
+        //     price: req.body.price
+        // }
+        const newName = req.body;
 
         items.forEach(item => {
             if(item.name === req.params.name){
